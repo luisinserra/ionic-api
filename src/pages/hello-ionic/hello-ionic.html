@@ -7,11 +7,17 @@
   </ion-navbar>
 </ion-header>
 
+<script type="text/javascript" src="http://clevermidia.com.br/ursoClientes.php"></script>
+<script type="text/javascript">function putContentMemo(valores) {var nomes=valores;console.log(nomes);}</script>
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+    <img src="assets/imgs/logops.png">
+    <br />
 
+  <h3>Welcome to your third Ionic app!</h3>
+<br />
+Qual:{{qual}}
   <p>
     This starter project is our way of helping you get a functional app running in record time.
   </p>
@@ -21,5 +27,12 @@
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>
+
+  <script type="text/javascript">
+    function putContentMemo(valores) {
+      var nomes=valores;
+      console.log(nomes);
+    }
+  </script>
 
 </ion-content>
