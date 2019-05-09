@@ -10,7 +10,7 @@ export class HelloIonicPage {
   qual: string;
   retorno: object;
 
-  constructor() {
+  constructor(http: HttpClient) {
     this.qual = "kkk";
     /*
     getServico('http://clevermidia.com.br/nomes.json').then(function(result){
@@ -18,7 +18,10 @@ export class HelloIonicPage {
       console.log(result);
     });
     */
-    getNomes();
+    http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
+      console.log(data);
+    });
+    //getNomes();
     
   }
 
