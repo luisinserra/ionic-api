@@ -9,14 +9,14 @@ import { AlertController } from 'ionic-angular';
 })
 export class ApiPage {
 
-  private nomes='';
+  private nomes;
   private alertCtrl;
 
   constructor(public navCtrl: NavController, public http: HttpClient, alertCtrl : AlertController) {
     this.alertCtrl = alertCtrl;
     console.log("No construtor");
     this.http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
-      this.nomes = data.nomes;
+      this.nomes = data;
       //console.log=(data);
     });
   }

@@ -1,6 +1,8 @@
 {
-  "name": "Um",
-  "integrations": {},
+  "name": "ionic-api",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "d3e6e9c4"
 }
