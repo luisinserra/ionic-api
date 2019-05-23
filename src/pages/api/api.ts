@@ -9,7 +9,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class ApiPage {
 
-  private nomes='';
+  private nomes;
   private alertCtrl;
 
   constructor(public navCtrl: NavController, public http: HttpClient, alertCtrl : AlertController) {
