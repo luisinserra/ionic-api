@@ -16,9 +16,13 @@ export class ApiPage {
     this.alertCtrl = alertCtrl;
     console.log("No construtor");
     this.http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
-      this.nomes = data.nomes;
+      this.trataNomes(data);
       //console.log=(data);
     });
+  }
+
+  trataNomes = (data) => {
+    this.nomes=data.nomes;
   }
 
   itemSelected = (pessoa) => {
