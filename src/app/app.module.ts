@@ -20,6 +20,9 @@ import { LoginPage } from '../pages/login/login';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -50,12 +53,14 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     ApiPage,
-    LoginPage
+    LoginPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SQLite,
+    SQLitePorter
   ]
 })
 export class AppModule {}
