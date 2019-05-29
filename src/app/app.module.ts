@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ApiPage } from '../pages/api/api';
 import { LoginPage } from '../pages/login/login';
+import { DevelopersPage } from '../pages/developers/developers.page';
 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,7 +35,8 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     HomePage,
     TabsPage,
     ApiPage,
-    LoginPage
+    LoginPage,
+    DevelopersPage
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     TabsPage,
     ApiPage,
     LoginPage,
+    DevelopersPage
   ],
   providers: [
     StatusBar,
