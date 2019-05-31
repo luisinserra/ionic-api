@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 
+import { Platform } from '@ionic/angular';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -36,13 +38,15 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     TabsPage,
     ApiPage,
     LoginPage,
-    DevelopersPage
+    DevelopersPage,
+    Platform
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    Platform
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,7 +67,7 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
-    SQLitePorter
+    SQLitePorter,
   ]
 })
 export class AppModule {}
