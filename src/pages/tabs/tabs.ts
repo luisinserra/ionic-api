@@ -5,6 +5,7 @@ import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { ApiPage } from '../api/api';
 import { LoginPage } from '../login/login';
+import { GeoPage } from '../geo/geo';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,6 +17,7 @@ export class TabsPage {
   tab3Root = ContactPage;
   tab4Root = ApiPage;
   tab5Root = LoginPage;
+  tab6Root = GeoPage;
 
   constructor() {
 

@@ -15,10 +15,15 @@ export class ApiPage {
   constructor(public navCtrl: NavController, public http: HttpClient, alertCtrl : AlertController) {
     this.alertCtrl = alertCtrl;
     console.log("No construtor");
-    this.http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
-      this.nomes = data.nomes;
-      //console.log=(data);
+    //this.http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
+  this.http.get("http://clevermidia.com.br/ursoClientes.php").subscribe(data => {
+        let dados = data;
+      this.trazDados(dados);
     });
+  }
+
+  trazDados = (dados) => {
+    this.nomes = dados.registros;
   }
 
   itemSelected = (pessoa) => {

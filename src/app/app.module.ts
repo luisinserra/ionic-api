@@ -10,6 +10,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { GeoPage } from '../pages/geo/geo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,10 @@ import { LoginPage } from '../pages/login/login';
 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+
+import { SQLite } from '@ionic-native/sqlite'
 
 @NgModule({
   declarations: [
@@ -31,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     ApiPage,
-    LoginPage
+    LoginPage,
+    GeoPage
   ],
   imports: [
     BrowserModule,
@@ -50,12 +56,15 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     ApiPage,
-    LoginPage
+    LoginPage,
+    GeoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
+    NativeGeocoder,
   ]
 })
 export class AppModule {}
