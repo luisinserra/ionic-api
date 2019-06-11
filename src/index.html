@@ -18,6 +18,7 @@
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
+
   <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
@@ -31,6 +32,10 @@
 
 </head>
 <body>
+
+  <div ng-app="apk" ng-controller="ctr">
+    
+  </div>
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
@@ -47,8 +52,12 @@
 
   <script type="text/javascript">
     function putContentMemo(valores) {
-      nomes=valores.registros;
+      var nomes=valores.registros;
       console.log(nomes);
+      document.getElementById('spanNomes').innerHTML=nomes;
+      return nomes;
+      // escopo=getScopo('divEscopo');
+      // escopo.nomes=nomes;
     }
   </script>
 

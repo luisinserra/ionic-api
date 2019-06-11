@@ -15,11 +15,18 @@ export class ApiPage {
   constructor(public navCtrl: NavController, public http: HttpClient, alertCtrl : AlertController) {
     this.alertCtrl = alertCtrl;
     console.log("No construtor");
-    //this.http.get("http://clevermidia.com.br/nomes.json").subscribe(data => {
-  this.http.get("http://clevermidia.com.br/ursoClientes.php").subscribe(data => {
-        let dados = data;
-      this.trazDados(dados);
+    this.http.get("http://clevermidia.com.br/ursoClientes.php").subscribe(data => {
+      this.trataNomes(data);
     });
+
+/*     const script = document.createElement("script");
+        script.src="http://clevermidia.com.br/ursoClientes.php";
+        script.async = true;
+        document.body.appendChild(script);
+ */  }
+
+  trataNomes = (data) => {
+    this.nomes=data.registros;
   }
 
   trazDados = (dados) => {
